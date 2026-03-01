@@ -1,0 +1,395 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: ProgWeb2
+meta:
+  id: wrk_53ce49f2571545419f32070d9e26f66e
+  created: 1771807063488
+  modified: 1772208530363
+  description: ""
+collection:
+  - url: http://localhost:3000/docs
+    name: /docs
+    meta:
+      id: req_398f5cdd91a643e69967ef514a825f8e
+      created: 1772381469888
+      modified: 1772390333509
+      isPrivate: false
+      description: ""
+      sortKey: -1771807176926.5
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.1
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImxvZ2luIjoidGVzdGUxMiIsImlhdCI6MTc3MjE2NDU1M30.MLVa2aQLRTM5p3S2hNActtsQF6YWkd7LBZi45sVPAj0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Auth
+    meta:
+      id: fld_23f57173043846ad86de70722bed19a7
+      created: 1771807173748
+      modified: 1771807424288
+      sortKey: -1771807176826.5
+      description: ""
+    children:
+      - url: http://localhost:3000/FurbWeb/v1/auth/login
+        name: /auth/login
+        meta:
+          id: req_1382ef3e594449ed89e0df5aefe5911c
+          created: 1771807189061
+          modified: 1772392036619
+          isPrivate: false
+          description: ""
+          sortKey: -1768514823051.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {"login":"teste12",
+             "senha":"teste12"}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImxvZ2luIjoieXVyaXJhYmVsbyIsImlhdCI6MTc3MjM4NjA1OX0.v9xnB--FHo089txgfr6vT3pPXuK5-5tH1m8zl_ceM0Q
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/auth/logout
+        name: /auth/logout
+        meta:
+          id: req_26f33826747d4ace854be01a3fc2cbf6
+          created: 1771807191703
+          modified: 1772392047199
+          isPrivate: false
+          description: ""
+          sortKey: -1766868642640.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "login": "yurirabelo",
+              "senha": "yurirabelo"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImxvZ2luIjoieXVyaXJhYmVsbyIsImlhdCI6MTc3MjM4NjA1OX0.v9xnB--FHo089txgfr6vT3pPXuK5-5tH1m8zl_ceM0Q
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/auth/register
+        name: /auth/register
+        meta:
+          id: req_bd4c26044a5c441699b7af1122aaaec8
+          created: 1772160228699
+          modified: 1772392023097
+          isPrivate: false
+          description: ""
+          sortKey: -1770161003462.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"login":"teste12",
+            	"senha":"teste12"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Comandas
+    meta:
+      id: fld_765883da6b8c41aeacb90f5367c068a6
+      created: 1771807179705
+      modified: 1771807423078
+      sortKey: -1771807176726.5
+      description: ""
+    children:
+      - url: http://localhost:3000/FurbWeb/v1/comandas/2
+        name: /comandas/{id}
+        meta:
+          id: req_74df21f6e8834354aa02c0c1efb51e34
+          created: 1771807445097
+          modified: 1772393781736
+          isPrivate: false
+          description: ""
+          sortKey: -1771807445097
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImxvZ2luIjoieXVyaXJhYmVsbyIsImlhdCI6MTc3MjM4NjA1OX0.v9xnB--FHo089txgfr6vT3pPXuK5-5tH1m8zl_ceM0Q
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas/2
+        name: /comandas/{id}
+        meta:
+          id: req_13b2dfd91f35404eb74d8eb5e1ae41ce
+          created: 1771807445285
+          modified: 1772393773465
+          isPrivate: false
+          description: ""
+          sortKey: -1771807445285
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {"produtos":[
+                    {"nome":"cogumelos",
+                     "preco":102030}]}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImxvZ2luIjoiZmVybmFuZGEiLCJpYXQiOjE3NzIzODYzMTF9.DBv63a-3X0wNipmnJv1ZRxh9-VKG_kdBx-HKbxSXnTQ
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas/2
+        name: /comandas/{id}
+        meta:
+          id: req_69f4d01912d742d2b91c9a8b5c5d2ef0
+          created: 1771807445470
+          modified: 1772393768391
+          isPrivate: false
+          description: ""
+          sortKey: -1771807445470
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          disabled: false
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImxvZ2luIjoiZmVybmFuZGEiLCJpYXQiOjE3NzIzODYzMTF9.DBv63a-3X0wNipmnJv1ZRxh9-VKG_kdBx-HKbxSXnTQ
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas
+        name: /comandas
+        meta:
+          id: req_f723629eb2e24560be98696fa303c05b
+          created: 1771807446139
+          modified: 1772392090617
+          isPrivate: false
+          description: ""
+          sortKey: -1771807446678
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            { "idCliente":2,
+                    "nomeCliente":"nome do cliente",
+                    "telefoneCliente":"111111111111",
+                    "produtos":[
+                        {"nome":"macarrao",
+                         "preco":501}]}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImxvZ2luIjoidGVzdGUxMiIsImlhdCI6MTc3MjM5MjA1Nn0.mfVV28YpnauO3em2GnQEiptrcIld4q26laFHm9Pbtnw
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas
+        name: /comandas
+        meta:
+          id: req_4d347c2a41ed4e6ab29da088631c8de2
+          created: 1771807446578
+          modified: 1772392137679
+          isPrivate: false
+          description: ""
+          sortKey: -1771807446778
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: token
+            value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImxvZ2luIjoiYWRtaW4iLCJpYXQiOjE3NzIxNjE5Nzh9.rZyl_G52N9fqGHBG0S87FrJFjyUZybMPPG4CrEKaSRg
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImxvZ2luIjoieXVyaXJhYmVsbyIsImlhdCI6MTc3MjM4NjA1OX0.v9xnB--FHo089txgfr6vT3pPXuK5-5tH1m8zl_ceM0Q
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas
+        name: /comandas - 400
+        meta:
+          id: req_31fe14dc9f8b490a9e4f0b4b8ad64d06
+          created: 1772165579862
+          modified: 1772392152113
+          isPrivate: false
+          description: ""
+          sortKey: -1771807446363.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: '{"nomeCliente":"João Silva"}'
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImxvZ2luIjoiZmVybmFuZGEiLCJpYXQiOjE3NzIzODYzMTF9.DBv63a-3X0wNipmnJv1ZRxh9-VKG_kdBx-HKbxSXnTQ
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/FurbWeb/v1/comandas
+        name: /comandas
+        meta:
+          id: req_e5afd4deef8046689910b8e84c64d516
+          created: 1772392146749
+          modified: 1772392149002
+          isPrivate: false
+          description: ""
+          sortKey: -1771807446049
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: token
+            value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImxvZ2luIjoiYWRtaW4iLCJpYXQiOjE3NzIxNjE5Nzh9.rZyl_G52N9fqGHBG0S87FrJFjyUZybMPPG4CrEKaSRg
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImxvZ2luIjoieXVyaXJhYmVsbyIsImlhdCI6MTc3MjM4NjA1OX0.v9xnB--FHo089txgfr6vT3pPXuK5-5tH1m8zl_ceM0Q
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_69f48ceab4d9a90b4071ee8f0ac353b921bf0d1e
+    created: 1772208558792
+    modified: 1772208558792
+environments:
+  name: Base Environment
+  meta:
+    id: env_69f48ceab4d9a90b4071ee8f0ac353b921bf0d1e
+    created: 1771807063500
+    modified: 1772208530362
+    isPrivate: false
